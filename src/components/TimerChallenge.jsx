@@ -32,6 +32,7 @@ export default function TimerChallenge({ level, timerTime }) {
     <>
       <ResultModal
         timeLeft={timeRemaining}
+        targetTime={targetTime}
         ref={dialog}
         onReset={handleReset}
       />
