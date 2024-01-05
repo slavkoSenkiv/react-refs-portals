@@ -2,20 +2,23 @@ import { useState, useRef } from "react";
 
 export default function Player() {
   const defName = "unknown entity";
-  const [enteredPlayerName, setPlayerName] = useState(defName);
-  const playerName = useRef();
+  const [playerName, setPlayerName] = useState(defName);
+  const nameRef = useRef();
 
-  function handleClick() {
-    setPlayerName(playerName.current.value);
-    playerName.current.value = "";
+  function updPlayerName() {
+    setPlayerName(nameRef.current.value);
+    nameRef.current.value = "";
   }
 
   return (
     <section id="player">
-      <h2>Welcome {enteredPlayerName ?? defName}</h2>
+      <h2>Welcome {playerName}</h2>
+
       <p>
-        <input ref={playerName} type="text" />
-        <button onClick={handleClick}>Set Name</button>
+        <input type="text" ref={nameRef} />
+        <button type="submit" onClick={updPlayerName}>
+          Submit
+        </button>
       </p>
     </section>
   );
