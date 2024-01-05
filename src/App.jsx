@@ -7,9 +7,9 @@ function App() {
       <Player />
       <div id="challenges">
         <TimerChallenge level="easy" timerTime={1} />
-        <TimerChallenge level="easy" timerTime={5} />
-        <TimerChallenge level="easy" timerTime={10} />
-        <TimerChallenge level="easy" timerTime={20} />
+        <TimerChallenge level="peasy" timerTime={5} />
+        <TimerChallenge level="medium" timerTime={10} />
+        <TimerChallenge level="pro" timerTime={20} />
       </div>
     </>
   );
